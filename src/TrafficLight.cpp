@@ -75,7 +75,7 @@ void TrafficLight::cycleThroughPhases()
     std::chrono::high_resolution_clock::time_point t2;
     std::random_device rd;
     std::mt19937 eng(rd());
-    std::uniform_int_distribution<int> dist(4,6);
+    std::uniform_int_distribution<int> dist(4000,6000);
     double cycleDuration = dist(eng);
     t1 = std::chrono::high_resolution_clock::now();
     while(true)

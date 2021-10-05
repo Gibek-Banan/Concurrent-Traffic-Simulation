@@ -93,8 +93,8 @@ void TrafficLight::cycleThroughPhases()
             {
                 _currentPhase=red;
             }
+            t1 = std::chrono::high_resolution_clock::now();
         }
         _messageQueue->send(std::move(_currentPhase));
-        t1 = std::chrono::high_resolution_clock::now();
     }
 }
